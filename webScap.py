@@ -49,7 +49,7 @@ for link in links:
     website = link
     res = requests.get(website)
     content = res.text
-    soup = BeautifulSoup(content,'lxml')
+    soup = BeautifulSoup(content,'lxml') 
     box = soup.find('article',class_= 'main-article')
 
     title = box.find('h1').get_text()
